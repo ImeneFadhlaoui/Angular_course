@@ -16,3 +16,5 @@
 
 <!-- Artisanal Binding -->
  <input #inp [value]="prenom" (input)="updatePrenom(inp.value)" type="text">
+
+ <app-second (eventToParent)="traitement($event)" [txtColor]="bgColor" [studentName]="'Marwen'"></app-second>
