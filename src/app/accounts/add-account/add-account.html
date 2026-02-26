@@ -1,0 +1,11 @@
+
+<label for="" >Account Name</label>
+<input #inpName type="text" class="form-control">
+
+<label for="">Account status</label>
+<select #selStatus class="form-control">
+@for (st of allStatus; track $index){
+    <option [value]="st">{{st}}</option>
+    }
+</select>
+<button (click)="addHandler(inpName.value,selStatus.value)" class="btn btn-primary">Add Account</button>
