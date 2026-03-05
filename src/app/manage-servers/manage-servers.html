@@ -1,0 +1,14 @@
+<input [(ngModel)]="selectedStatus" type="text" class="form-control">
+
+<ul class="list-group">
+
+  @for (serv of servers | filter:selectedStatus; track $index){
+      <li class="list-group-item" [ngClass]="affecterClass(serv)">
+    {{serv.name | short:10}} {{serv.type | titlecase}} {{serv.date | date: 'fullDate' | uppercase}} 
+    <span class="badge text-bg-secondary">{{serv.status}}</span>
+  </li>
+  }
+
+</ul>
+
+<button (click)="addServer()" class="btn btn-primary">Add server</button>
