@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Candidat } from '../models/Candidat';
 import { NoAvatarPipe } from '../pipes/no-avatar-pipe';
+import { GestionRecrues } from '../services/gestion-recrues';
 
 @Component({
   selector: 'app-detail',
@@ -9,4 +10,12 @@ import { NoAvatarPipe } from '../pipes/no-avatar-pipe';
   styleUrl: './detail.css',
 })
 export class Detail {
-@Input() selCandidat?: Candidat;}
+  @Input() selCandidat!: Candidat;
+  
+  private recSer = inject(GestionRecrues)
+
+  ajouterRecrue(){
+    this.recSer.addRecrue(this.selCandidat)
+  }
+  
+}
