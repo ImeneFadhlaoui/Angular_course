@@ -6,9 +6,10 @@ import { HomeAccount } from './accounts/home-account/home-account';
 import { Direct } from './direct/direct';
 import { ManageServers } from './manage-servers/manage-servers';
 import { GestionCandidats } from './services/gestion-candidats';
+import { HomeProducts } from './products/home-products/home-products';
 @Component({
   selector: 'app-root',
-  imports: [First,Cv,HomeAccount,Direct,ManageServers],
+  imports: [First,Cv,HomeAccount,Direct,ManageServers, HomeProducts],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
