@@ -7,9 +7,10 @@ import { Direct } from './direct/direct';
 import { ManageServers } from './manage-servers/manage-servers';
 import { GestionCandidats } from './services/gestion-candidats';
 import { HomeProducts } from './products/home-products/home-products';
+import { Navbar } from './navbar/navbar';
 @Component({
   selector: 'app-root',
-  imports: [First,Cv,HomeAccount,Direct,ManageServers, HomeProducts],
+  imports: [First,Cv,HomeAccount,Direct,ManageServers, HomeProducts,RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

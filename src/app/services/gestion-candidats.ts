@@ -9,10 +9,14 @@ export class GestionCandidats {
   private allCandidates: Candidat[] = [
     new Candidat(1, 'bart', 'simpson', 26, 'ingénieur', 'bart.jpeg'),
     new Candidat(2, 'homer', 'simpson', 52, 'chef de projet', 'homer.png'),
-    new Candidat(1, 'lisa', 'simpson', 21, 'designer', 'lisa.png'),
+    new Candidat(3, 'lisa', 'simpson', 21, 'designer', 'lisa.png'),
     new Candidat(4, 'marge', 'simpson', 66, 'Analyste'),
   ];
   
+   getCandidateById(candId: number) {
+    return this.allCandidates.find((cand) => cand.id == candId);
+  }
+
 
   
   getAllCandidates() {
